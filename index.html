@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bulb</title>
+    </head>
+    <style>
+    body {
+        background-color: black;
+    }
+
+    #bulb {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 18%;
+    }
+
+    button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: yellow;
+        padding: 15px 30px;
+        border-radius: 20px;
+
+    }
+
+    @media screen and (max-device-width: 420px) and (orientation: portrait) {
+
+
+    #bulb {
+          display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+    }
+</style>
+
+    <body>
+
+        <img id="bulb" src="off.png" alt"" class="center">
+        <button id="toggleBtn" class="center btn"> Turn On </button>
+        <script>
+        let btn = document.getElementById('toggleBtn')
+        let bulb = document.getElementById('bulb')
+        btn.addEventListener("click", toggleBulb)
+        function toggleBulb(e) {
+            if (btn.textContent.includes('Off')) {
+                bulb.src = "off.png"
+                btn.textContent = "Turn On"
+            }
+            else {
+                bulb.src = "on.jpg"
+                btn.textContent = "Turn Off"
+            }
+
+        }
+       
+    </script>
+    </body>
+
+</html>
